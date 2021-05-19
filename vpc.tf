@@ -1,3 +1,8 @@
+module "network" {
+  source  = "terraform-google-modules/network/google"
+  version = "2.5.0"
+  network_name = "gaurav-network"
+  project_id   = var.project
 subnets = [
   {
     subnet_name   = "gaurav-subnet"
@@ -5,3 +10,4 @@ subnets = [
     subnet_region = var.region
   }
 ]
+}
